@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Purchase Options</title>
+
+  <style>
+    :root {
+      --background: #080808;
+      --card: #121212;
+      --card-hover: #1a1a1a;
+      --red: #9f2028;
+      --red-bright: #c93640;
+      --text: #eeeeee;
+      --muted: #999999;
+      --border: #292929;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      background:
+        radial-gradient(circle at top, rgba(159, 32, 40, 0.16), transparent 35%),
+        var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: min(1100px, 100%);
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--red-bright);
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin-bottom: 14px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 600px;
+      margin: 0 auto 42px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+      text-align: left;
+    }
+
+    .plan {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-height: 430px;
+      padding: 30px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #171717, var(--card));
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .plan:hover {
+      transform: translateY(-8px);
+      border-color: var(--red);
+    }
+
+    .plan.featured {
+      border: 1px solid var(--red);
+      box-shadow: 0 0 35px rgba(159, 32, 40, 0.18);
+    }
+
+    .badge {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--red);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .plan h2 {
+      margin-bottom: 10px;
+      color: var(--text);
+      font-size: 1.45rem;
+    }
+
+    .description {
+      min-height: 54px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .price {
+      margin: 24px 0;
+      color: var(--red-bright);
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+
+    .features {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 30px;
+      list-style: none;
+      color: #c2c2c2;
+    }
+
+    .features li::before {
+      margin-right: 10px;
+      color: var(--red-bright);
+      content: "✓";
+      font-weight: bold;
+    }
+
+    .button {
+      width: 100%;
+      margin-top: auto;
+      padding: 14px 18px;
+      border: 1px solid var(--red);
+      border-radius: 9px;
+      background: transparent;
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-weight: bold;
+      transition: background 0.2s ease, color 0.2s ease;
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  box-sizing: border-box;
+    }
+
+    .button:hover,
+    .featured .button {
+      background: var(--red);
+      color: white;
+    }
+
+    .button:hover {
+      background: var(--red-bright);
+    }
+
+    @media (max-width: 800px) {
+      .plans {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+      }
+
+      .plan {
+        min-height: 390px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <p class="eyebrow">DG Educational Classes</p>
+    <h1>Purchase a Class</h1>
+    <p class="intro">
+      Select the class or package you wish to purchase
+    </p>
+
+    <section class="plans" aria-label="Class purchase options">
+  <article class="plan">
+    <h2>CNC Class- 27th September 2026</h2>
+    <p class="description">
+      An in-depth live class with Q&A - Starts 19:30 (UK time)
+    </p>
+
+    <div class="price">£19.99 GBP <span>/ class</span></div>
+
+    <ul class="features">
+      <li>Live class session</li>
+      <li>Live & Email Q&A</li>
+      <li>Access to class recording</li>
+    </ul>
+
+    <a class="button" href="https://www.paypal.com/ncp/payment/ZW8FMCW4D8PDG">Purchase Class</a>
+  </article>
+
+  <article class="plan">
+    <h2>FP Class - 25th October 2026</h2>
+    <p class="description">
+      An in-depth live class with Q&A - Starts 19:30 (UK time)
+    </p>
+
+    <div class="price">£19.99 GBP<span>/ class</span></div>
+
+    <ul class="features">
+      <li>Live class session</li>
+      <li>Live & Email Q&A</li>
+      <li>Access to class recording</li>
+    </ul>
+
+    <a class="button" href="https://www.paypal.com/ncp/payment/E3WWXWUMQ8R5G">Purchase Class</a>
+  </article>
+
+  <article class="plan featured">
+    <span class="badge">Best Value</span>
+
+    <h2>Class Pack</h2>
+    <p class="description">
+      Both classes at a dicount price
+    </p>
+
+    <div class="price">£35 GBP <span>/ 2 classes</span></div>
+
+    <ul class="features">
+      <li>Two live class sessions</li>
+      <li>Session recordings</li>
+      <li>Live & Email Q&A</li>
+      <li>Discount</li>
+    </ul>
+
+    <a class="button" href="https://www.paypal.com/ncp/payment/MXR9A7UB8DM28">Purchase Pack</a>
+  </article>
+</section>
+  </main>
+</body>
+</html>
