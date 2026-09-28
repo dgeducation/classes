@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Complete Your Sign-up</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+  :root {
+    --black: #070707;
+    --deep-black: #101010;
+    --red: #a71919;
+    --bright-red: #d32929;
+    --grey: #999999;
+    --light-grey: #d5d5d5;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 20px;
+    background:
+      radial-gradient(
+        circle at center,
+        rgba(150, 20, 20, 0.18),
+        transparent 38%
+      ),
+      var(--black);
+    color: var(--light-grey);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+  }
+
+  .payment-card {
+    width: 100%;
+    max-width: 560px;
+    padding: 65px 40px;
+    border: 1px solid rgba(180, 180, 180, 0.3);
+    background: rgba(17, 17, 17, 0.9);
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.45);
+  }
+
+  .eyebrow {
+    margin-bottom: 24px;
+    color: var(--bright-red);
+    font-size: 0.68rem;
+    letter-spacing: 0.27em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    color: var(--light-grey);
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(3.2rem, 9vw, 5.6rem);
+    font-weight: 400;
+    line-height: 0.95;
+  }
+
+  .ornament {
+    margin: 28px 0;
+    color: var(--red);
+    font-size: 1.2rem;
+    letter-spacing: 0.45em;
+  }
+
+  .description {
+    max-width: 390px;
+    margin: 0 auto;
+    color: var(--grey);
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+
+  .price {
+    margin: 30px 0 4px;
+    color: var(--bright-red);
+    font-family: "Cormorant Garamond", serif;
+    font-size: 3.8rem;
+    line-height: 1;
+  }
+
+  .price-note {
+    color: var(--grey);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .payment-button {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 34px;
+    border: 1px solid var(--red);
+    background: var(--red);
+    color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+      background 0.25s ease,
+      border-color 0.25s ease,
+      color 0.25s ease;
+  }
+
+  .payment-button:hover {
+    border-color: var(--bright-red);
+    background: var(--bright-red);
+    color: #ffffff;
+  }
+
+  .secure-note {
+    margin-top: 22px;
+    color: #666666;
+    font-size: 0.68rem;
+  }
+
+  @media (max-width: 500px) {
+    .payment-card {
+      padding: 50px 24px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+  <main class="payment-card">
+    <div class="eyebrow">Complete your membership</div>
+
+    <h1>Five-Part Course</h1>
+
+    <div class="ornament">✦ ✧ ✦</div>
+
+    <p class="description">
+      The link below will take you to PayPal to complete the payment.
+    </p>
+
+    <div class="price">£50</div>
+<br>
+    <div class="price-note">Full course access & membership</div>
+
+    <!-- Replace the URL below with your payment or checkout link -->
+    <a
+      class="payment-button"
+      href="https://www.paypal.com/ncp/payment/FZZ6Y4CDNNDT4"
+      target="_blank"
+      rel="noopener"
+    >
+      Proceed to Payment
+    </a>
+
+    <div class="secure-note">
+      Secure PayPal checkout
+    </div>
+  </main>
+
+</body>
+</html>
